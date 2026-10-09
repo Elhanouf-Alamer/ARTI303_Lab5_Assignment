@@ -1,0 +1,65 @@
+?- father(homer, bart).
+true.
+
+?- setof(X, father(X, homer), Fathers).
+Fathers = [abraham].
+
+?- mother(marge, lisa).
+true.
+
+?- setof(X, mother(X, ling), Mothers).
+Mothers = [selma].
+
+?- son(bart, marge).
+true.
+
+?- setof(X, son(X, abraham), Sons).
+Sons = [herb, homer].
+
+?- daughter(ling, selma).
+true.
+
+?- setof(X, daughter(X, homer), Daughters).
+Daughters = [lisa, maggie].
+
+?- brother(herb, homer).
+true.
+
+?- setof(X, brother(X, lisa), Brothers).
+Brothers = [bart].
+
+?- sister(lisa, bart).
+true.
+
+?- setof(X, sister(X, marge), Sisters).
+Sisters = [patty, selma].
+
+?- grandfather(abraham, maggie).
+true.
+
+?- setof(X, grandfather(X, bart), Grandfathers).
+Grandfathers = [abraham, clancy].
+
+?- aunt(marge, ling).
+true.
+
+?- setof(X, aunt(X, bart), Aunts).
+Aunts = [patty, selma].
+
+?- uncle(herb, lisa).
+true.
+
+?- setof(X, uncle(X, maggie), Uncles).
+Uncles = [herb].
+
+?- cousin(bart, ling).
+true.
+
+?- setof(X, cousin(X, ling), Cousins).
+Cousins = [bart, lisa, maggie].
+
+?- ancestor(jackie, ling).
+true.
+
+?- setof(X, ancestor(X, bart), Ancestors).
+Ancestors = [abraham, clancy, homer, jackie, marge, mona].
